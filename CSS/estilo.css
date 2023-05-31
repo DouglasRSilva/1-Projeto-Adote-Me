@@ -1,0 +1,579 @@
+*{
+    padding: 0;
+    margin: 0;
+}/*Aqui zera todas as formatações padrões da página*/
+
+
+header{
+    margin: auto; /*O que eu estava atrás para fazer o posicionamento dos elementos no centro*/
+    width: 1300px;
+}
+
+
+@media(max-width: 1200px){
+    section{
+        width: 1000px;
+    }
+}
+
+@media(max-width: 1024px){
+    section{
+        width: 700px;
+    }
+}
+
+@media(max-width: 768px){
+    section{
+        width: 400px;
+    }
+}
+
+@media(max-width: 425px){
+    section{
+        width: 320px;
+    }/*Aqui termina a formatação de responsividade*/
+}/*Aqui termina a formatação do Header*/
+
+#cabecalho{
+    margin: auto;
+    border: 2px solid rgb(255, 255, 255);
+    width: 1280px;
+    height: 250px;
+}/*Aqui termina a formatação do cabeçalho que está contido dentro do header*/
+
+.logo{
+    display: inline-block;
+    float: left;
+}/*Aqui termina a formatação do logo que está contido dentro do header*/
+
+#cabecalho>.galeria{
+    width: 700px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    margin: 5px 130px;
+    border-radius: 20px;
+}
+
+.foto{
+    position: absolute;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    width: 700px;
+    height: 240px;
+}
+
+.foto:nth-child(1){
+
+}
+.foto:nth-child(2){
+    animation-delay: 5s;   
+}
+.foto:nth-child(3){
+    animation-delay: 10s;
+}
+
+@keyframes animacao{
+    25%{
+        opacity: 1;
+        transform: scale(1.1,1.1);
+    }
+    50%{
+        opacity: 0;
+    }
+}/*Aqui termina o efeito slideshow transição de imagens e sua formatação*/
+
+.menu{
+    margin: auto;
+    width: 1200px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    background-color: #86a3aa;
+    color: white;
+    width: 170px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    position: relative;
+    font-weight: bold;
+    z-index: 1;
+
+}
+
+.menu ul li>a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu ul li{
+   font-size: 16px;
+}
+
+.menu ul li:hover{
+    background-color: #81A9B2;
+}
+
+.menu ul ul{
+    display: none;
+    margin: 0px;
+}
+
+.menu ul li:hover>ul{
+    display: block;
+}
+
+.menu ul ul ul{
+    margin-left: 170px;
+    top: 0px;
+    position: absolute;
+}
+
+#barra-pesquisa{
+    margin-right: 100px;
+    padding: 0;
+}
+
+#barra-pesquisa input{
+    width: 310px;
+    height: 47px;
+    text-align: center;
+    border-radius: 10px;
+}/*Aqui termina a formatação do menu e de todos os seus componentes*/
+
+#filtro{
+    float: left;
+    line-height: 2em;
+    margin: 5px 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#filtro .filtro-box>ul{
+    list-style: none;
+    padding: 13px 47px;
+}
+
+.filtro-box h3{
+    border-radius: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: #81A9B2;
+    padding: 5px;
+    text-align: center;
+    width: 230px;
+}
+
+button{
+    margin: 3px 30px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #81A9B2;
+}
+
+button:hover{
+    color: white;
+}/*Aqui termina toda a formatação do filtro de pesquisa e seus componentes*/
+
+#conteudo{
+    margin: auto;
+    margin-right: 40px;
+}
+
+.caixa{
+    width: 850px;
+    height: 400px;
+    margin: 15px 60px;
+    border-radius: 20px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: rgb(248, 248, 248);
+    float: right;
+}
+
+.caixa>h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+
+.caixa>img{
+    border-radius: 10px;
+    border: 2px solid rgb(211, 211, 211);
+    width: 830px; 
+    height: 270px;
+    margin: 5px 7px;
+}
+
+.caixa>p{
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 5px 20px;
+}
+
+.caixa>a{
+    margin: 5px 20px;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+}
+
+.caixa>a:hover{
+    font-size: 19px;
+    color:#81A9B2
+}/*Aqui termina a formatação das caixas de conteudo e todos os seus elementos*/
+
+
+footer{
+    clear: both;
+    border-radius: 30px;
+    width: 1300px;
+    height: 300px;
+    background-color: #81A9B2;
+    color: white;
+    text-align: center;
+}
+
+.dados, .redes{
+    padding: 30px;
+    color: black;
+}
+
+.dados ul li{
+    list-style: none;
+    margin-top: 3px;
+}
+
+.dados ul li>a{
+    text-decoration: none;
+    color: black;
+}
+
+.dados ul li>a:hover{
+    color: white;
+}
+
+.redes svg{
+    list-style: none;
+    margin: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.redes svg:hover{
+    color: white;
+}/*Aqui termina toda formatação do rodapé e seus componentes*/
+
+/*****************Aqui começa a formatação da página pets-para-adocao.html************/
+
+#pets-adocao{
+    margin-left: 290px;
+    width: 1080px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#pets-adocao .pets{
+    margin: 20px 20px;
+    padding: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 30px;
+    float: left;
+    width: 200px;
+    height: 270px;
+    z-index: 0;
+}
+
+#pets-adocao .pets>img{
+    border-radius: 20px;
+    width: 195px;
+    height: 170px;
+}
+
+#pets-adocao .pets>p{
+    text-align: left;
+    font-size: 15px;
+}
+
+#pets-adocao .pets>a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+#pets-adocao .pets:hover{
+    transition: 0.8s;
+    background-color: #81A9B2;
+}
+
+#pets-adocao .pets>a:hover{
+    color: white;
+}
+
+/*****************Aqui termina a formatação da página pets-para-adocao.html************/
+
+/*****************Aqui começa a formatação da página acompanhe-sua-adoçao.html************/
+
+#consulta-adocao .adocao{
+    margin-left: 40px;
+    float: left;
+    width: 1200px;
+    height: 50em;
+    text-align: center;
+}
+
+.adocao>img{
+    border-radius: 30px; 
+    padding: 10px;
+    width: 1100px;
+    height: 500px;
+}
+
+.adocao>p{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.adocao p>input{
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+    width: 400px;
+    height: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.adocao button{
+    margin: 3px 30px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*****************Aqui termina a formatação da página acompanhe-sua-adoçao.html************/
+
+/*****************Aqui começa a formatação da página nossa-trajetoria.html************/
+
+#trajetoria{
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1200px;
+}
+
+#trajetoria>h3{
+    padding: 10px;
+    font-size: 25px;
+}
+
+#trajetoria>p{
+    padding: 5px;
+    font-size: 20px;
+}
+
+#trajetoria>img{
+    width: 1190px;
+    height: 600px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+/*****************Aqui termina a formatação da página nossa-trajetoria.html************/
+
+/*****************Aqui começa a formatação da página colaboradores.html************/
+
+#colaboradores{
+    width: 1240px;
+    height: 450px;
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nossa-equipe h4{
+    padding: 10px;
+    font-size: 25px;
+}
+
+.nossa-equipe p{
+    padding: 5px;
+    font-size: 20px;
+}
+
+.nossa-equipe button{
+    font-size: 23px;
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 550px;
+    margin-top: 15px;
+}
+
+#logo{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+    width: 1235px;
+    height: 270px; 
+}
+
+figure{
+    float: left;
+    margin: 4px;
+    border-radius: 35px;
+    width: 230px;
+    height: 260px;
+    border: 0.5px solid rgb(221, 220, 220);
+}
+
+#fig0{
+    margin-left: 7px;
+    background-image: url(..//imagens-colaboradores/Petz-Logo-Preto&Branco.jpg);
+}
+#fig0:hover{
+    transition: 1s;
+    background-image: url(..//imagens-colaboradores/Petz-Logo-Colorido.jpg);
+}
+#fig1{
+    background-image: url(../imagens-colaboradores/Goldem-Logo-Preto&Branco.jpg);
+}
+#fig1:hover{
+    transition: 1s;
+    background-image: url(../imagens-colaboradores/Goldem-Logo-Colorido.jpg);
+}
+#fig2{
+    background-image: url(../imagens-colaboradores/DogChow-Logo-Preto&Branco.jpg);
+}
+#fig2:hover{
+    transition: 1s;
+    background-image: url(../imagens-colaboradores/DogChow-Logo-Colorido.jpg);
+}
+#fig3{
+    background-image: url(../imagens-colaboradores/PremierPet-Logo-Preto&Branco.jpg);
+}
+#fig3:hover{
+    transition: 1s;
+    background-image: url(../imagens-colaboradores/PremierPet-Logo-Colorido.jpg);
+}
+#fig4{
+    background-image: url(../imagens-colaboradores/InstitutoEuSouOBicho-Logo-SemCor.jpg);
+}
+
+/*****************Aqui termina a formatação da página colaboradores.html************/
+/*****************Aqui começa a formatação da página seja-um-colaborador.html************/
+#seja-um-colaborador{
+    background-color: #86a3aa;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    transition: 1.5s;
+}
+
+#seja-um-colaborador:hover{
+    background-color: #81A9B2;
+    transition: 1.5s;
+}
+
+#seja-um-colaborador>form{
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 70px;
+    margin-left: 230px;
+}
+
+#seja-um-colaborador form>div{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#seja-um-colaborador form div>input{
+    width: 300px;
+    height: 25px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+/*****************Aqui termina a formatação da página seja-um-colaborador.html************/
+/*****************Aqui começa a formatação da página como-ajudar.html.html************/
+
+
+/*****************Aqui Termina a formatação da página como-ajudar.html.html************/
+/*****************Aqui começa a formatação da página contato.html************/
+#contato{
+    background-color: #86a3aa;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    transition: 1.5s;
+}
+
+#contato:hover{
+    background-color: #81A9B2;
+    transition: 1.5s;
+}
+
+#contato>form{
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 60px;
+    margin-left: 230px;
+}
+
+#contato form>div{
+    padding: 3px;
+}
+
+#contato form div>input{
+    width: 370px;
+    height: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#contato form div>textarea{
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 300px;
+    max-height: 300px;
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*****************Aqui termina a formatação da página contato.html************/
